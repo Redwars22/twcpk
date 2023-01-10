@@ -1,0 +1,59 @@
+<!--                                    #     #                              
+   ##   #    # #####  #####  ###### #    # ##    #   ##   ##### #  ####  #    # 
+  #  #  ##   # #    # #    # #      #    # # #   #  #  #    #   # #    # ##   # 
+ #    # # #  # #    # #    # #####  #    # #  #  # #    #   #   # #    # # #  # 
+ ###### #  # # #    # #####  #      # ## # #   # # ######   #   # #    # #  # # 
+ #    # #   ## #    # #   #  #      ##  ## #    ## #    #   #   # #    # #   ## 
+ #    # #    # #####  #    # ###### #    # #     # #    #   #   #  ####  #    #
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎨️ Seletor de Cores Tailwind - criado pelo @AndrewNation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="input.css">
+  </head>
+  <body class="flex justify-center bg-gray-900 text-white text-center">
+    <div class="pt-20">
+      <h1 class="text-3xl mb-10">🎨️ Seletor de Cores Tailwind</h1>
+      <label for="">Matiz</label>
+      <input
+        type="range"
+        id="color-hue"
+        min="0"
+        max="22"
+        step="1"
+        onchange="getColor()"
+      />
+      <br />
+      <label for="">Intensidade</label>
+      <input
+        type="range"
+        id="color-intensity"
+        min="100"
+        max="900"
+        step="100"
+        onchange="getColor()"
+      />
+      <div class="w-full flex flex-col justify-center align-center gap-12 pt-12">
+          <div
+            id="color-show"
+            style="
+              width: 150px;
+              height: 150px;
+              border-radius: 10px;
+              border-color: white;
+              border-width: 2px;
+              align-self: center;
+            "
+          ></div>
+          <h1 id="color" style="font-size: 25px">???</h1>
+      </div>
+    </div>
+    <script src="colorpicker.js"></script>
+  </body>
+</html>
